@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="/assets/lettuce.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="lettuce.css" />
+    <title>Lettuce Sims</title>
+  </head>
+  <body>
+    <div id="container">
+      <section>
+        <img src="/assets/웹로고.png" alt="" id="logo" />
+        <p>양상추 인간되기가 선풍적인 인기를 끌고 있다.</p>
+        <img src="/assets/youtubeLettuce.png" alt="" id="youtubeLettuce" />
+        <p>
+          거대 네트워크가 만들어낸 양상추 더미 <br />이 양상추들은 어디에서 온
+          것일까?
+        </p>
+      </section>
+      <section>
+        <img src="/assets/section2.png" alt="" id="simsFarmImg" />
+      </section>
+      <div id="EnterLastpage">
+        <img src="/assets/lettuce.png" alt="" />
+        <p>당신도 양상추되기에 참여하시겠습니까?</p>
+        <div>
+          <button id="BeingLettuce" onclick="beingLettuce()">Yes</button>
+          <button id="NotBeingLettuce" onclick="goIntro('lettuceIntro.html')">
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="lettuce.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/* Intro */
+#IntroContainer{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainLogo{
+  width: 80px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+#IntroContainer section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section h1{
+  font-size: 1.8rem;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+section h1:first-child{
+  margin-top: 70px;
+}
+
+section img{
+  width: 40vw;
+}
+
+section p{
+  font-size: 1rem;
+  text-align: center;
+  line-height:25px;
+  margin-top: 45px;
+}
+
+/* Main page*/
+
+#Cameracontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container section:first-child{
+  height: 100vh;
+  justify-content: center;
+  font-weight: 600;
+}
+
+
+#logo{
+  width: 80px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+#youtubeLettuce{
+  width: 75vw;
+  margin-bottom: 70px;
+}
+
+#simsFarmImg{
+  width: 100vw;
+}
+
+
+#EnterLastpage{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#EnterLastpage img{
+  width: 50vw;
+  margin-bottom: 30px;
+} 
+
+#EnterLastpage div{
+  width: 300px;
+  text-align: center;
+}
+
+#EnterLastpage  button{
+  width: 100px;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 10px;
+
+}
+
+#BeingLettuce{
+  margin-right: 20px;
+}

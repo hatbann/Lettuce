@@ -1,0 +1,178 @@
+body {
+	text-align: center;
+  height: 80vh;
+}
+
+h1 {
+	font-family: 'Give You Glory', cursive;
+	    text-align: left;
+}
+
+h2{
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h3 {
+	display: inline-block;
+}
+
+#camera-denied {
+    font-family: sans-serif;
+    display: none;
+    padding: 15% 0;
+}
+
+.anna {
+	font-family: 'Major Mono Display', monospace;
+    position: absolute;
+    top: -52px;
+    right: 0;
+}
+a {
+    text-decoration: none;
+        font-weight: bolder;
+        color: black;
+}
+
+.container {
+	width: 520px;
+	margin: auto;
+}
+
+#video-container {
+	position: relative;
+}
+
+#overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateY(180deg);
+}
+
+video {
+	width: 100%;
+	transform: rotateY(180deg);
+}
+
+.sound-buttons {
+	margin: auto 5%;
+	width: 100%;
+}
+
+.sound-buttons div {
+  	position:relative;
+	width: 26%;
+	padding-bottom:25%;
+	float: left;
+	margin-bottom: 10px;
+	border-radius: 100%;
+	background: rgb(105, 255, 74);
+	background: radial-gradient(circle, rgb(105, 255, 74) 0%, rgb(172, 250, 156) 53%, rgb(230, 255, 226) 72%);
+	cursor: pointer;
+display: flex;
+
+}
+
+.sound-buttons div:nth-child(2), .sound-buttons div:nth-child(5), .sound-buttons div:nth-child(8) {
+	margin-right: 6%;
+	margin-left: 6%;
+}
+
+.sound-buttons div img {
+   position:absolute;
+	top: 15%;
+    left: 12%;
+    width: 65%;
+	margin: auto;
+	transform: rotateY(180deg);
+	/*padding-top: 10%;*/
+} 
+
+
+@media (max-width: 600px){
+ .container {
+    width: 90%;
+}
+
+.sound-buttons {
+	margin: auto;
+}
+
+.sound-buttons div {
+  	position:relative;
+	width: 19%;
+	padding-bottom:19%;
+}
+.sound-buttons div:nth-child(2), .sound-buttons div:nth-child(5), .sound-buttons div:nth-child(8) {
+	margin-right: auto;
+	margin-left: auto;
+}
+}
+
+/*Slider*/
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  line-height: 2em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
