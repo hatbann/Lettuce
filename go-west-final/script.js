@@ -38,10 +38,10 @@ function drawFace(detections, expressions) {
 	}
 
 	const box = detections[0].box
-	const imgWidth = box.width * 1.5;
-	const imgHeight = box.height * 2;
-	const x = box.x - imgWidth / 2+120;
-	const y = box.y - imgHeight / 2 - 40 ;
+	const imgWidth = box.width * 2.5;
+	const imgHeight = box.height * 2.5;
+	const x = box.x - imgWidth / 2+90;
+	const y = box.y - imgHeight / 2  + 60;
 	const exprImg = ninaFaces.filter(f => f.src.includes(currentExpression))[0];
 	canvasContext.drawImage(exprImg, x, y, imgWidth, imgHeight)
 }
