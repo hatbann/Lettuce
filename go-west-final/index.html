@@ -41,8 +41,31 @@
       href="../assets/lettuce.ico"
       type="image/x-icon"
     />
+    <style>
+      .transparent {
+  display: none;
+}
+#messege{
+  width: 100vw;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+#xBtn{
+  width: 7vw;
+  position: absolute;
+  top: 30px;
+  left: 320px;
+  z-index: 200;
+}
+    </style>
   </head>
   <body>
+    <img src="../assets/star.png" alt="" id="star" >
+    <img src="../assets/messege.png" alt="" id="messege" class="transparent">
+    <img src="../assets/xBtn.png" alt="" id="xBtn" class="transparent">
     <div class="container">
       <div id="video-container">
         <video id="camera-stream" autoplay playsinline></video>
@@ -55,10 +78,30 @@
       <span id="mood-detection"> </span>
       <h2>Everyone is becoming caabage <br />before they know it</h2>
       <p>모두는 어느새 양배추화되어 가고 있다</p>
-      <button onclick="goIntro('../lettuceIntro.html')">처음으로</button>
     </div>
 
     <script type="text/javascript" src="script.js"></script>
+    <script>
+      $('#star').click(function(e){
+  let star = $('#star');
+  let xBtn = $('#xBtn');
+  let msg = $('#messege');
+
+  star.addClass('transparent');
+  xBtn.removeClass('transparent');
+  msg.removeClass('transparent');
+});
+
+$('#xBtn').click(function(e){
+  let star = $('#star');
+  let xBtn = $('#xBtn');
+  let msg = $('#messege');
+
+  star.removeClass('transparent');
+  xBtn.addClass('transparent');
+  msg.addClass('transparent');
+})
+    </script>
     <script src="../lettuce.js"></script>
   </body>
 </html>

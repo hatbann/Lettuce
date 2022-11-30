@@ -21,9 +21,13 @@ function beingLettuce(){
 }
 
 
+/* ***********페이지이동************ */
+
 function enterPage(){
-  location.replace('./lettuce.html');
+  location.replace('./lettuce1.html');
 }
+
+
 
 function goIntro(link){
   location.replace(link);
