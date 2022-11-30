@@ -31,17 +31,17 @@ setInterval(() => {
 
 function drawFace(detections, expressions) {
 	// Clear the screen
-	canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+	//canvasContext.clearRect(0, 0, canvas.width, canvas.height);
 
 	if (moodDetectionMode) {
 		currentExpression = Object.keys(expressions).reduce((a, b) => expressions[a] > expressions[b] ? a : b);
 	}
 
 	const box = detections[0].box
-	const imgWidth = box.width * 2.5;
-	const imgHeight = box.height * 2.5;
-	const x = box.x - imgWidth / 2+90;
-	const y = box.y - imgHeight / 2  + 60;
+	const imgWidth = box.width * 2;
+	const imgHeight = box.height * 2;
+	const x = box.x - imgWidth / 4;
+	const y = box.y - imgHeight / 4;
 	const exprImg = ninaFaces.filter(f => f.src.includes(currentExpression))[0];
 	canvasContext.drawImage(exprImg, x, y, imgWidth, imgHeight)
 }
