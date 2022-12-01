@@ -16,9 +16,6 @@ function getpauased() {
 }
 
 
-function beingLettuce(){
-  location.replace('./go-west-final/index.html');
-}
 
 
 /* ***********페이지이동************ */
@@ -27,7 +24,13 @@ function enterPage(){
   location.replace('./lettuce1.html');
 }
 
+function goLettuce2(){
+  location.replace('./lettuce2.html');
+}
 
+function beingLettuce(){
+  location.replace('./go-west-final/index.html');
+}
 
 function goIntro(link){
   location.replace(link);
