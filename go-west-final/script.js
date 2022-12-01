@@ -107,3 +107,4 @@ function play(url, mood) {
 	audio = new Audio("sounds/" + url + ".mp3");
 	audio.play();
 }
+

@@ -11,6 +11,7 @@
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <!-- Twitter Card data -->
     <meta name="twitter:card" value="summary" />
     <!-- Open Graph data -->
@@ -44,6 +45,14 @@
     <style>
       .transparent {
   display: none;
+  
+}
+
+.arrow{
+  position: fixed;
+  bottom: 30px;
+  left: 320px;
+  z-index: 200;
 }
 #messege{
   height: 100vh;
@@ -60,10 +69,28 @@
   left: 320px;
   z-index: 200;
 }
+
+
+#star{
+  width: 7vw;
+  position: fixed;
+  top: 30px;
+  left: 320px;
+  z-index: 200;
+}
+
+#captureBtn{
+  border: none;
+  background-color: #A9E14A;
+  color: white;
+  border-radius: 50%;
+  padding: 10px 20px;
+}
     </style>
   </head>
   <body>
     <img src="../assets/star.png" alt="" id="star" >
+    <img src="../assets/Arrow.png" alt="" class="arrow" onclick="goImages()" />
     <img src="../assets/messege.png" alt="" id="messege" class="transparent">
     <img src="../assets/xBtn.png" alt="" id="xBtn" class="transparent">
     <div class="container">
@@ -76,12 +103,25 @@
         <canvas id="overlay"></canvas>
       </div>
       <span id="mood-detection"> </span>
-      <h2>Everyone is becoming caabage <br />before they know it</h2>
-      <p>모두는 어느새 양배추화되어 가고 있다</p>
+      <h2>Everyone is becoming Lettuce<br />before they know it</h2>
+      <p>모두는 어느새 양상추화되어 가고 있다</p>
+      <p>당신도 양배추 심즈로 등록하시겠습니까?</p>
+      <button type="button" id="captureBtn">등록하기</button>
     </div>
-
+    <div id="capImg"></div>
     <script type="text/javascript" src="script.js"></script>
     <script>
+      const store = {
+  setImg: (img) => {
+    localStorage.setItem('LettuceImg', JSON.stringify(img));
+  },
+  getImg: () => {
+    return JSON.parse(localStorage.getItem('LettuceImg'));
+  },
+};
+
+
+
       $('#star').click(function(e){
   let star = $('#star');
   let xBtn = $('#xBtn');
@@ -101,6 +141,21 @@ $('#xBtn').click(function(e){
   xBtn.addClass('transparent');
   msg.addClass('transparent');
 })
+
+  $('#captureBtn').on("click", function(){
+    let video = $('#video-container')
+    html2canvas(document.querySelector('#video-container')).then(canvas => {
+      let total = [];
+      if(store.getImg()!== null){
+        total = store.getImg();
+      }
+      total.push(canvas.toDataURL());
+      store.setImg(total);
+      alert('축하합니다. 당신도 명예 양배추 심즈로 등록되셨습니다')
+    })
+  })
+
+
     </script>
     <script src="../lettuce.js"></script>
   </body>

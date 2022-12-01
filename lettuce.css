@@ -11,17 +11,46 @@ body{
   z-index: 200;
 }
 
+.transparent {
+  display: none;
+}
+#messege{
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+
+#star{
+  width: 7vw;
+  position: fixed;
+  top: 30px;
+  left: 320px;
+  z-index: 200;
+}
+
+#xBtn{
+  width: 7vw;
+  position: absolute;
+  top: 30px;
+  left: 320px;
+  z-index: 200;
+}
 
 /* Intro */
 #IntroContainer{
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  
+  background-image: url('assets/background1.png');
+  background-size: cover;
+  position: relative;
 }
 
 #mainLogo{
   width: 80px;
-  position: relative;
+  position: absolute;
   top: 20px;
   left: 20px;
 }
@@ -32,107 +61,50 @@ body{
   align-items: center;
 }
 
-section h1{
-  font-size: 1.8rem;
-  margin: 0;
-  margin-bottom: 10px;
+#IntroContainer #logo{
+  width: 90vw;
+  position: absolute;
+  top: 52px;
 }
 
-section h1:first-child{
-  margin-top: 70px;
+
+
+#IntroContainer section img{
+  width: 70vw;
+  top: 200px;
+  position: absolute;
 }
 
-section img{
-  width: 40vw;
-}
-
-section p{
-  font-size: 1rem;
+#IntroContainer section p{
+  font-size: 1.2rem;
   text-align: center;
   line-height:25px;
-  margin-top: 45px;
+  top: 535px;
+  color: #FFD42A;
+  font-weight: 800;
+  position: absolute;
+  -webkit-text-stroke: 0.8px black;
 }
 
 /* lettuce1*/
-
-#Cameracontainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-
-section{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#container1 section:first-child{
+#container1{
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  font-weight: 600;
 }
 
-
-#container1 video{
-  width: 80vw;
-}
-
-#logo{
-  width: 80px;
-  position: absolute;
-  left: 20px;
-  top: 20px;
-}
-
-#youtubeLettuce{
-  width: 75vw;
-  margin-bottom: 70px;
-}
-
-#simsFarmImg{
+#container iframe{
   width: 100vw;
-}
-
-
-#EnterLastpage{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-}
-
-#EnterLastpage img{
-  width: 50vw;
-  margin-bottom: 30px;
-} 
-
-#EnterLastpage div{
-  width: 300px;
-  text-align: center;
-}
-
-#EnterLastpage  button{
-  width: 100px;
-  padding: 5px 20px;
-  border: none;
-  border-radius: 10px;
-
-}
-
-#BeingLettuce{
-  margin-right: 20px;
+  height: auto;
 }
 
 /* lettuce2*/
-section{
-  height: 100vh;
+#lettuce2Container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #block{
@@ -145,4 +117,54 @@ section{
   word-break: break-all;
   padding: 10px;
   display: flex;
+}
+
+#EnterLastpage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#EnterLastpage img{
+  width: 80vw;
+}
+
+/* ------ 이미지 페이지들  ------*/
+#lettuceCapImgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 30px;
+}
+
+#fame{
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+  z-index: 400;
+}
+
+#lettuceCapImgs img:first-child{
+  margin-top: 40px;
+}
+
+#lettuceCapImgs img{
+  width: 60vw;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#gointroBtn{
+   position: fixed;
+    border: none;
+  bottom: 30px;
+  left: 150px;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 800;
+  color: #FFD42A;
+  -webkit-text-stroke: 0.8px black;
+
+
 }

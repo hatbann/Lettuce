@@ -15,6 +15,25 @@ function getpauased() {
   lettuce.removeClass('bigger');
 }
 
+$('#star').click(function(e){
+  let star = $('#star');
+  let xBtn = $('#xBtn');
+  let msg = $('#messege');
+
+  star.addClass('transparent');
+  xBtn.removeClass('transparent');
+  msg.removeClass('transparent');
+});
+
+$('#xBtn').click(function(e){
+  let star = $('#star');
+  let xBtn = $('#xBtn');
+  let msg = $('#messege');
+
+  star.removeClass('transparent');
+  xBtn.addClass('transparent');
+  msg.addClass('transparent');
+})
 
 
 
@@ -32,9 +51,12 @@ function beingLettuce(){
   location.replace('./go-west-final/index.html');
 }
 
-function goIntro(link){
-  location.replace(link);
+function goIntro(){
+  location.replace('./lettuceIntro.html');
 }
 
+function goImages(){
+  location.replace('../lettuceimages.html')
+}
 
 

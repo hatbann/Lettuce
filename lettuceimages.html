@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lettuce.css">
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="fame">명예의 양배추 심즈들</h1>
+    <div id="lettuceCapImgs">
+    </div>
+        <button type="button" onclick="goIntro()" id="gointroBtn">처음으로</button>
+
+    <script src="lettuce.js"></script>
+    <script>
+         const store = {
+            setImg: (img) => {
+    localStorage.setItem('LettuceImg', JSON.stringify(img));
+  },
+  getImg: () => {
+    return JSON.parse(localStorage.getItem('LettuceImg'));
+  },
+};
+
+let imgContainer = $('#lettuceCapImgs');
+
+ function paintImg(){
+   let total = [];
+   if(store.getImg() !== null){
+        total = store.getImg();
+    }
+    for(let i = 0; i<total.length; i++){
+        const newImg = document.createElement('img');
+                newImg.setAttribute('src', total[i]);
+        imgContainer.append(newImg);
+        }
+    }
+
+    paintImg();
+    </script>
+</body
+</html>
