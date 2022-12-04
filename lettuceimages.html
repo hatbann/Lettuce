@@ -13,7 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="fame">명예의 양배추 심즈들</h1>
+    <h1 id="fame">명예의 양배추 심즈</h1>
     <div id="lettuceCapImgs">
     </div>
     <button type="button" onclick="goIntro()" id="gointroBtn">처음으로</button>
@@ -36,6 +36,7 @@ let imgContainer = $('#lettuceCapImgs');
    if(store.getImg() !== null){
         total = store.getImg();
     }
+    
     for(let i = 0; i<total.length; i++){
         const newImg = document.createElement('img');
                 newImg.setAttribute('src', total[i]);

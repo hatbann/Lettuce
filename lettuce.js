@@ -52,6 +52,7 @@ function beingLettuce(){
 }
 
 function goIntro(){
+  window.localStorage.clear();
   location.replace('./lettuceIntro.html');
 }
 
