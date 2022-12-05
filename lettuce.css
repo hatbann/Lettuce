@@ -42,7 +42,6 @@ body{
 /* Intro */
 #IntroContainer{
   height: 100vh;
-  
   background-image: url('assets/background1.png');
   background-size: cover;
   position: relative;
@@ -87,17 +86,37 @@ body{
 }
 
 /* lettuce1*/
+#lettuce1Container{
+  position: relative;
+}
+
+#youtubeBack{
+  z-index: 1;
+  width: 375px;
+display: inline-block;
+}
+
 #container1{
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 280px;
 }
 
 #container iframe{
   width: 100vw;
   height: auto;
+
+}
+
+#youtubeBar{
+  width: 100vw;
+  position: absolute;
+  bottom: 173px;
+  left: 0;
+  z-index: 5;
 }
 
 /* lettuce2*/
